@@ -76,16 +76,15 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
 				<executions>
 					<execution>
+						<id>default-jar</id>
+						<phase>package</phase>
 						<goals>
-							<goal>repackage</goal>
+							<goal>jar</goal>
 						</goals>
-						<configuration>
-							<classifier>spring3</classifier>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>
