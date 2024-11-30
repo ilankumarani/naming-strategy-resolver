@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>org.ilan</groupId>
 	<artifactId>spel-resolver</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1-Alpha</version>
 	<name>spel-resolver</name>
 	<description>Spring Expression Language value resolver</description>
 	<url/>
