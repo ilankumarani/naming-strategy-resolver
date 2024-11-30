@@ -75,19 +75,32 @@
 
 	<build>
 		<plugins>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+
+
+			<plugin>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>${maven-source-plugin.version}</version>
 				<executions>
 					<execution>
-						<id>default-jar</id>
+						<id>attach-sources</id>
 						<phase>package</phase>
 						<goals>
-							<goal>jar</goal>
+							<goal>jar-no-fork</goal>
 						</goals>
 					</execution>
 				</executions>
 			</plugin>
+
 		</plugins>
 	</build>
 
