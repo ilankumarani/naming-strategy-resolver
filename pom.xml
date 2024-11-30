@@ -15,6 +15,8 @@
 	<description>Spring Expression Language value resolver</description>
 	<url/>
 
+
+
 	<licenses>
 		<license>
 			<name>Apache License, Version 2.0</name>
@@ -44,14 +46,19 @@
 	</scm>-->
 
 	<scm>
-		<url>https://github.com/saharshsingh/master-pom</url>
+		<url>https://github.com/ILANKUMARAN11/spel-resolver</url>
 		<connection>scm:git:git://github.com/saharshsingh/master-pom.git</connection>
 		<developerConnection>scm:git:git@github.com:saharshsingh/master-pom.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
+
 	<properties>
 		<java.version>17</java.version>
+		<maven-javadoc-plugin.version>3.11.1</maven-javadoc-plugin.version>
+		<maven-source-plugin.version>3.3.1</maven-source-plugin.version>
+		<nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -71,6 +78,16 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+						<configuration>
+							<classifier>spring3</classifier>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
