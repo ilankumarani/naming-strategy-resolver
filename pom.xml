@@ -11,7 +11,7 @@
 	<groupId>org.ilan</groupId>
 	<artifactId>naming-strategy-resolver</artifactId>
 	<version>0.1.0-Beta</version>
-	<name>spel-resolver</name>
+	<name>naming-strategy-resolver</name>
 	<description>Hibernate naming physical-strategy resolver</description>
 	<url/>
 
