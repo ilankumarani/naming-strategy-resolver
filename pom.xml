@@ -75,17 +75,10 @@
 		</developer>
 	</developers>
 
-	<!--<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>-->
-
 	<scm>
-		<url>https://github.com/ILANKUMARAN11/spel-resolver</url>
 		<connection>scm:git:git://github.com/ILANKUMARAN11/spel-resolver.git</connection>
 		<developerConnection>scm:git:git@github.com:ILANKUMARAN11/spel-resolver.git</developerConnection>
+		<url>https://github.com/ILANKUMARAN11/spel-resolver</url>
 		<tag>HEAD</tag>
 	</scm>
 
