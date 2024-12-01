@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.ilan</groupId>
-	<artifactId>spel-resolver</artifactId>
+	<artifactId>naming-strategy-resolver</artifactId>
 	<version>0.1.0-Beta</version>
 	<name>spel-resolver</name>
-	<description>Spring Expression Language value resolver</description>
+	<description>Hibernate naming physical-strategy resolver</description>
 	<url/>
 
 
