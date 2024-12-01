@@ -11,7 +11,7 @@
 	<groupId>org.ilan</groupId>
 	<artifactId>naming-strategy-resolver</artifactId>
 	<version>0.1.0-Beta</version>
-	<name>${project.groupId}:${project.artifactId}</name>
+	<name>${project.artifactId}</name>
 	<description>Hibernate naming physical-strategy resolver</description>
 	<url/>
 
@@ -24,6 +24,7 @@
 		<maven.release.version>3.1.1</maven.release.version>
 		<nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
 		<maven-gpg-plugin.version>3.2.7</maven-gpg-plugin.version>
+		<spotless-maven-plugin.version>2.43.0</spotless-maven-plugin.version>
 	</properties>
 
 	<dependencies>
@@ -62,6 +63,17 @@
 
 	<build>
 		<plugins>
+
+			<plugin>
+				<groupId>com.diffplug.spotless</groupId>
+				<artifactId>spotless-maven-plugin</artifactId>
+				<version>${spotless-maven-plugin.version}</version>
+				<configuration>
+					<java>
+						<googleJavaFormat/>
+					</java>
+				</configuration>
+			</plugin>
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -152,6 +164,7 @@
 				<plugins>
 
 					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-source-plugin</artifactId>
 						<version>${maven-source-plugin.version}</version>
 						<executions>
@@ -202,7 +215,7 @@
 						<version>${nexus-staging-maven-plugin.version}</version>
 						<extensions>true</extensions>
 						<configuration>
-							<serverId>sonatype-nexus-staging</serverId>
+							<serverId>ossrh</serverId>
 							<nexusUrl>https://oss.sonatype.org/</nexusUrl>
 							<autoReleaseAfterClose>false</autoReleaseAfterClose>
 						</configuration>
