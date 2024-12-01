@@ -11,7 +11,7 @@
 	<groupId>org.ilan</groupId>
 	<artifactId>naming-strategy-resolver</artifactId>
 	<version>0.1.0-Beta</version>
-	<name>naming-strategy-resolver</name>
+	<name>${project.groupId}:${project.artifactId}</name>
 	<description>Hibernate naming physical-strategy resolver</description>
 	<url/>
 
@@ -122,9 +122,9 @@
 	</developers>
 
 	<scm>
-		<connection>scm:git:git://github.com/ILANKUMARAN11/spel-resolver.git</connection>
-		<developerConnection>scm:git:git@github.com:ILANKUMARAN11/spel-resolver.git</developerConnection>
-		<url>https://github.com/ILANKUMARAN11/spel-resolver</url>
+		<connection>scm:git:git://github.com/ilankumarani/naming-strategy-resolver.git</connection>
+		<developerConnection>scm:git:git@github.com:ilankumarani/naming-strategy-resolver.git</developerConnection>
+		<url>https://github.com/ilankumarani/naming-strategy-resolver</url>
 		<tag>HEAD</tag>
 	</scm>
 
