@@ -8,7 +8,7 @@
 		<version>3.0.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>org.ilan</groupId>
+	<groupId>io.github.ilankumarani</groupId>
 	<artifactId>naming-strategy-resolver</artifactId>
 	<version>0.1.0-Beta</version>
 	<name>${project.artifactId}</name>
@@ -224,7 +224,7 @@
 		<tag>main</tag>
 	</scm>
 
-	<distributionManagement>
+	<!--<distributionManagement>
 		<snapshotRepository>
 			<id>sonatype-nexus-staging</id>
 			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
@@ -233,6 +233,6 @@
 			<id>sonatype-nexus-staging</id>
 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 		</repository>
-	</distributionManagement>
+	</distributionManagement>-->
 
 </project>
