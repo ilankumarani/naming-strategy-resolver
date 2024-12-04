@@ -33,6 +33,8 @@ public class CustomPhysicalNamingStrategy extends PhysicalNamingStrategyStandard
             if (isSpelExpression(identifierText)) {
                 String sequence = resolveSpelExpression(identifierText, "Sequence");
                 return super.toPhysicalSequenceName(preserveIdentifier(sequence), jdbcEnvironment);
+            } else {
+                return super.toPhysicalSequenceName(identifier, jdbcEnvironment);
             }
         }
         return super.toPhysicalSequenceName(identifier, jdbcEnvironment);
@@ -45,6 +47,8 @@ public class CustomPhysicalNamingStrategy extends PhysicalNamingStrategyStandard
             if (isSpelExpression(identifierText)) {
                 String catalog = resolveSpelExpression(identifierText, "Catalog");
                 return super.toPhysicalCatalogName(preserveIdentifier(catalog), jdbcEnvironment);
+            } else {
+                return super.toPhysicalCatalogName(identifier, jdbcEnvironment);
             }
         }
         return super.toPhysicalCatalogName(identifier, jdbcEnvironment);
@@ -57,6 +61,8 @@ public class CustomPhysicalNamingStrategy extends PhysicalNamingStrategyStandard
             if (isSpelExpression(identifierText)) {
                 String schema = resolveSpelExpression(identifier.getText(), "Schema");
                 return super.toPhysicalSchemaName(preserveIdentifier(schema), jdbcEnvironment);
+            } else {
+                return super.toPhysicalSchemaName(identifier, jdbcEnvironment);
             }
         }
         return super.toPhysicalSchemaName(identifier, jdbcEnvironment);
@@ -70,6 +76,8 @@ public class CustomPhysicalNamingStrategy extends PhysicalNamingStrategyStandard
             if (isSpelExpression(identifierText)) {
                 String table = resolveSpelExpression(identifier.getText(), "Table");
                 return super.toPhysicalTableName(preserveIdentifier(table), jdbcEnvironment);
+            } else {
+                return super.toPhysicalTableName(identifier, jdbcEnvironment);
             }
         }
         return super.toPhysicalTableName(identifier, jdbcEnvironment);
