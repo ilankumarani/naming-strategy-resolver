@@ -26,6 +26,7 @@
         <maven-gpg-plugin.version>3.2.7</maven-gpg-plugin.version>
         <spotless-maven-plugin.version>2.43.0</spotless-maven-plugin.version>
         <checkstyle-maven-plugin.version>3.6.0</checkstyle-maven-plugin.version>
+        <h2.version>2.3.232</h2.version>
     </properties>
 
     <dependencies>
@@ -46,6 +47,7 @@
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
+            <version>${h2.version}</version>
             <scope>test</scope>
         </dependency>
 
