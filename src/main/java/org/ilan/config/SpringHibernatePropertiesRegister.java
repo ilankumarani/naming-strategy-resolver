@@ -15,10 +15,20 @@ import java.util.Properties;
 import static org.ilan.constant.NamingStrategyConstant.PHYSICAL_NAMING_STRATEGY_ENABLED;
 import static org.ilan.constant.NamingStrategyConstant.SPRING_PHYSICAL_NAMING_STRATEGY;
 
+/**
+ * Register the Naming strategy when Spring creates Bean of entityManager
+ * @author Ilankumaran Ilangovan
+ */
 @Slf4j
 @Description("Class for resolving jpa naming strategy when spring creates entityManager and Datasource (3) ")
 public class SpringHibernatePropertiesRegister implements ApplicationListener<ApplicationEnvironmentPreparedEvent> {
 
+    /**
+     * Spring will use it for creating the bean in IOC container
+     */
+    public SpringHibernatePropertiesRegister(){
+
+    }
 
     public void onApplicationEvent(ApplicationEnvironmentPreparedEvent event) {
         log.info("CustomPhysicalNamingStrategy is set to Spring Environment");

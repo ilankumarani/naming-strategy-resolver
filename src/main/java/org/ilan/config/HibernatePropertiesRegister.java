@@ -1,7 +1,6 @@
 package org.ilan.config;
 
 
-import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.ilan.namingStrategy.CustomPhysicalNamingStrategy;
 import org.ilan.provider.StringValueResolverProvider;
@@ -24,17 +23,32 @@ import static org.hibernate.cfg.AvailableSettings.PHYSICAL_NAMING_STRATEGY;
 import static org.ilan.constant.NamingStrategyConstant.PHYSICAL_NAMING_STRATEGY_ENABLED;
 
 
+/**
+ * Register the Naming strategy when user creates Bean of entityManager
+ * @author Ilankumaran Ilangovan
+ */
 @Slf4j
-@NoArgsConstructor
 @Configuration
 @DependsOn(StringValueResolverProvider.BEAN_NAME)
 @ConditionalOnProperty(name = PHYSICAL_NAMING_STRATEGY_ENABLED, havingValue = "true", matchIfMissing = true)
 @Description("Class for resolving jpa naming strategy when user creates Bean of entityManager")
 public class HibernatePropertiesRegister {
 
-    /*
-        the below builder code is copied from org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.
-        Refer the same If you wanted to enhance anything in the future.
+    /**
+     * To satisfy java-doc
+     */
+    public HibernatePropertiesRegister(){
+
+    }
+
+    /**
+     * the below builder code is copied from org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.
+     *         Refer the same If you wanted to enhance anything in the future.
+     * @param jpaVendorAdapter jpaVendorAdapter
+     * @param persistenceUnitManager persistenceUnitManager
+     * @param customizers customizers
+     * @param jpaProperties jpaProperties
+     * @return EntityManagerFactoryBuilder that has the custom naming strategy class add in spring environment properties
      */
     @Bean
     public EntityManagerFactoryBuilder entityManagerFactoryBuilder(JpaVendorAdapter jpaVendorAdapter,

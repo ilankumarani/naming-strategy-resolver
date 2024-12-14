@@ -8,7 +8,22 @@ import org.ilan.provider.StringValueResolverProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Custom naming strategy is resolved here
+ * @author Ilankumaran Ilangovan
+ */
 public class CustomPhysicalNamingStrategy extends PhysicalNamingStrategyStandardImpl {
+
+    /**
+     * To satisfy java-doc
+     */
+    public CustomPhysicalNamingStrategy(){
+
+    }
+
+    /**
+     * Class name used to register in Spring environment
+     */
     public static final String CLASS_NAME = CustomPhysicalNamingStrategy.class.getName();
     private static final Logger log = LoggerFactory.getLogger(CustomPhysicalNamingStrategy.class);
 
