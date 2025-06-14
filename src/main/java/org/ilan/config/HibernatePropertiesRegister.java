@@ -34,7 +34,7 @@ public class HibernatePropertiesRegister implements ApplicationListener<Applicat
     }
 
     public void onApplicationEvent(ApplicationPreparedEvent event) {
-        log.info("CustomPhysicalNamingStrategy is set to Hibernate Environment");
+        log.info("CustomPhysicalNamingStrategy is set for Hibernate properties Environment");
 
         ApplicationContext applicationContext = event.getApplicationContext();
         ConfigurableEnvironment environment = (ConfigurableEnvironment)applicationContext.getEnvironment();

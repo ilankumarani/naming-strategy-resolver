@@ -31,7 +31,7 @@ public class SpringPropertiesRegister implements ApplicationListener<Application
     }
 
     public void onApplicationEvent(ApplicationEnvironmentPreparedEvent event) {
-        log.info("CustomPhysicalNamingStrategy is set to Spring Environment");
+        log.info("CustomPhysicalNamingStrategy is set to Spring JPA Environment");
         ConfigurableEnvironment environment = event.getEnvironment();
         String isEnabled = environment.getProperty(PHYSICAL_NAMING_STRATEGY_ENABLED);
 
