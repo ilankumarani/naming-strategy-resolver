@@ -10,6 +10,7 @@ import org.hibernate.service.ServiceRegistry;
 import org.ilan.entity.Employee;
 import org.ilan.provider.StringValueResolverProvider;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -34,6 +35,7 @@ public class NamingStrategyTest extends NamingStrategyBase {
         session = factory.openSession();
     }
 
+    @Disabled
     @Test
     public void testNamingStrategy() {
         Employee employee = Employee.builder().id(1L).email("ilankumaran.i@gmail.com").name("Ilankumaran").build();

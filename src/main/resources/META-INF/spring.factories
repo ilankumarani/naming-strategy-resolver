@@ -1,2 +1,4 @@
 # Application Listeners
-org.springframework.context.ApplicationListener=org.ilan.config.SpringHibernatePropertiesRegister
+org.springframework.context.ApplicationListener=\
+org.ilan.config.SpringPropertiesRegister,\
+org.ilan.config.HibernatePropertiesRegister

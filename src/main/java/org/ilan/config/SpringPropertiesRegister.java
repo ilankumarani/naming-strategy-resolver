@@ -21,17 +21,17 @@ import static org.ilan.constant.NamingStrategyConstant.SPRING_PHYSICAL_NAMING_ST
  */
 @Slf4j
 @Description("Class for resolving jpa naming strategy when spring creates entityManager and Datasource (3) ")
-public class SpringHibernatePropertiesRegister implements ApplicationListener<ApplicationEnvironmentPreparedEvent> {
+public class SpringPropertiesRegister implements ApplicationListener<ApplicationEnvironmentPreparedEvent> {
 
     /**
      * Spring will use it for creating the bean in IOC container
      */
-    public SpringHibernatePropertiesRegister(){
+    public SpringPropertiesRegister(){
 
     }
 
     public void onApplicationEvent(ApplicationEnvironmentPreparedEvent event) {
-        log.info("CustomPhysicalNamingStrategy is set to Spring Environment");
+        log.info("CustomPhysicalNamingStrategy is set to Spring JPA Environment");
         ConfigurableEnvironment environment = event.getEnvironment();
         String isEnabled = environment.getProperty(PHYSICAL_NAMING_STRATEGY_ENABLED);
 

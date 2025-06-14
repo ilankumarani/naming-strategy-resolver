@@ -10,7 +10,7 @@
     </parent>
     <groupId>io.github.ilankumarani</groupId>
     <artifactId>naming-strategy-resolver</artifactId>
-    <version>1.0.0</version>
+    <version>2.0.0</version>
     <name>${project.artifactId}</name>
     <description>Hibernate naming physical-strategy resolver</description>
     <url>https://github.com/ilankumarani/naming-strategy-resolver</url>

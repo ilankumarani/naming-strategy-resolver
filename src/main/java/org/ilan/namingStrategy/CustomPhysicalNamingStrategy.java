@@ -4,6 +4,7 @@ package org.ilan.namingStrategy;
 import org.hibernate.boot.model.naming.Identifier;
 import org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl;
 import org.hibernate.engine.jdbc.env.spi.JdbcEnvironment;
+import org.ilan.provider.CarrierSpelResolverProvider;
 import org.ilan.provider.StringValueResolverProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,7 +33,7 @@ public class CustomPhysicalNamingStrategy extends PhysicalNamingStrategyStandard
     }
 
     private String resolveSpelExpression(String identifierText, String name) {
-        String value = StringValueResolverProvider.getStringValueResolver().resolveStringValue(identifierText);
+        String value = CarrierSpelResolverProvider.getConfigurableListableBeanFactory().resolveEmbeddedValue(identifierText);
         log.info(name + "name property : {} and the resolved value :: {}", identifierText, value);
         return value;
     }
