@@ -51,7 +51,7 @@ public class HibernatePropertiesRegister implements ApplicationListener<Applicat
         if (Objects.isNull(isEnabled) || isEnabled.isEmpty() || (Objects.nonNull(isEnabled) && isEnabled.trim().isEmpty()) || (Objects.nonNull(isEnabled) && !isEnabled.trim().isEmpty() && Boolean.valueOf(isEnabled.trim()) == Boolean.TRUE)) {
             Properties props = new Properties();
             props.put(HIBERNATE_PHYSICAL_NAMING_STRATEGY, CustomPhysicalNamingStrategy.CLASS_NAME);
-            final String NAMING_STRATEGY_PROPERTY = "physicalNamingProperty";
+            final String NAMING_STRATEGY_PROPERTY = "hibernatePhysicalNamingProperty";
             environment.getPropertySources().addFirst(new PropertiesPropertySource(NAMING_STRATEGY_PROPERTY, props));
         }
     }
