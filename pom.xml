@@ -13,7 +13,7 @@
     <version>1.0.0</version>
     <name>${project.artifactId}</name>
     <description>Hibernate naming physical-strategy resolver</description>
-    <url/>
+    <url>https://github.com/ilankumarani/naming-strategy-resolver</url>
 
 
     <properties>
