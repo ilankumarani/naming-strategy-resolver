@@ -4,15 +4,20 @@ package org.ilan.namingStrategy;
 import org.hibernate.boot.model.naming.Identifier;
 import org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl;
 import org.hibernate.engine.jdbc.env.spi.JdbcEnvironment;
-import org.ilan.provider.CarrierSpelResolverProvider;
 import org.ilan.provider.StringValueResolverProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.DependsOn;
+
+import static org.ilan.provider.StringValueResolverProvider.BEAN_NAME;
 
 /**
  * Custom naming strategy is resolved here
  * @author Ilankumaran Ilangovan
  */
+@DependsOn(BEAN_NAME)
+@Configuration
 public class CustomPhysicalNamingStrategy extends PhysicalNamingStrategyStandardImpl {
 
     /**
@@ -33,7 +38,7 @@ public class CustomPhysicalNamingStrategy extends PhysicalNamingStrategyStandard
     }
 
     private String resolveSpelExpression(String identifierText, String name) {
-        String value = CarrierSpelResolverProvider.getConfigurableListableBeanFactory().resolveEmbeddedValue(identifierText);
+        String value = StringValueResolverProvider.getStringValueResolver().resolveStringValue(identifierText);
         log.info(name + "name property : {} and the resolved value :: {}", identifierText, value);
         return value;
     }
